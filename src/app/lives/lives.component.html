@@ -1,0 +1,10 @@
+<div class = 'lives-comp'>
+  Lives:
+  <i class="fa fa-heart" *ngIf="lives === 3" aria-hidden="true"></i>
+  <i class="fa fa-heart" *ngIf="lives === 3 || lives === 2"></i>
+  <i class="fa fa-heart" *ngIf="lives === 3 || lives === 2 || lives === 1"></i>
+  <i class="fa fa-heart-o" *ngIf="!lives || lives === 1 || lives === 2"></i>
+  <i class="fa fa-heart-o" *ngIf="!lives || lives === 1"></i>
+  <i class="fa fa-heart-o" *ngIf="!lives"></i>
+
+</div>

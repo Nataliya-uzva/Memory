@@ -1,0 +1,2 @@
+<div *ngIf = "!cell.isOpen" class="smth" (click)="setState()"> </div>
+<div *ngIf = "cell.isOpen" class="smth {{cell.class}}" [ngClass]="{hide: cell.isHidden}" (click)="setState()"> </div>

@@ -1,0 +1,8 @@
+.smth {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: url('app/images/platinum.png');
+  background-position: -1280px -1360px;
+}

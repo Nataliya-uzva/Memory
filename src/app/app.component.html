@@ -1,0 +1,45 @@
+<h1 class='header'>Memory!</h1>
+<h2 class='description'>Train your brain! Play this game every day.<br>
+  Keep your brain in shape! <br>
+  Find pairs of images under the following tiles: </h2>
+<h2 class='dashboard'>
+  <div class='lives'><lives [lives]='lives'></lives></div>
+  <div class='level'><level [level]='level'></level></div>
+  <div class='timer'><timer [time]='time'></timer></div>
+</h2>
+<h3 class='tab' *ngIf="startLevel">
+  Are you ready? <button class="start" (click)="startLevel = !startLevel; showField = !showField; startGame()">GO!</button>
+</h3>
+
+<div class="main-field" *ngIf="showField" [ngClass]="{biggest: level === 3, middle: level === 2}">
+  <cell *ngFor="let item of list" class="cell" [cell]="item" [stopClick]="stopClick" (remove)="destroy($event.cell)"></cell>
+</div>
+<!-- Lose level -->
+<h3 class='review'  *ngIf="lostLevel && lives !=0">
+  Sorry you lose <i class="fa fa-frown-o" aria-hidden="true"></i> Try again!
+  <button class="start" (click)="showField = !showField; startGame()">GO!</button>
+</h3>
+<div class='main-field1' *ngIf="lostLevel && lives !=0">
+  <img src="app/images/lost.gif">
+</div>
+<!-- Won level -->
+<h3 class='review' *ngIf="winLevel && level != 3">
+  You won this level!!! <i class="fa fa-smile-o" aria-hidden="true"></i>
+  You can play next level! <button class="start" (click)="showField = !showField; startGame()">GO!</button>
+</h3>
+<div class='main-field1' *ngIf="winLevel && level != 3">
+  <img src="app/images/win.gif">
+</div>
+<!-- Game over -->
+<h3 class='review' *ngIf="lives === 0">GAME OVER!!! Try again! <button class="start" (click)="showField = !showField; startGame()">GO!</button>
+</h3>
+<div class='main-field1' *ngIf="lives === 0">
+  <img src="app/images/lost_game.gif">
+</div>
+<!-- Won the game -->
+<h3 class='review' *ngIf="winLevel && level === 3">You won the GAME!!! <i class="fa fa-smile-o" aria-hidden="true"></i> You can play again!  <button class="start" (click)="showField = !showField; startGame()">GO!</button>
+</h3>
+<div class='main-field1' *ngIf="winLevel && level === 3">
+
+  <img src="app/images/win_game.gif">
+</div>
