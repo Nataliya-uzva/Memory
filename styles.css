@@ -1,0 +1,74 @@
+body {
+  width: 100%;
+  margin: auto;
+}
+
+.header{
+  text-align:center;
+  font-size: 50px;
+  color: royalblue;
+  border-bottom: 1px dotted #d3d3d3;
+}
+.description{
+  text-align:center;
+  color: darkblue;
+  border-bottom: 1px dotted #d3d3d3;
+}
+.cell{
+  width: 80px;
+  border-radius: 10px;
+  height:80px;
+  margin: 10px;
+  display: inline-block;
+}
+.main-field{
+  display: block;
+  height: 350px;
+  width: 400px;
+  margin: 0 auto;
+}
+.main-field1{
+  display: block;
+  height: 350px;
+  width: 500px;
+  margin: 0 auto;
+}
+.dashboard {
+  display:block;
+  height: 50px;
+  width: 900px;
+  margin: 0 auto;
+  color: darkblue;
+  font-size: 25px;
+}
+.lives, .level, .timer {
+  width: 250px;
+  height: 45px;
+  float: left;
+  margin: 0 20px;
+  text-align: center;
+}
+.tab{
+  text-align:center;
+  color: darkblue;
+  margin-top: 20px;
+
+}
+.review {
+  text-align:center;
+  color: darkblue;
+}
+.biggest {
+  width: 600px;
+}
+.middle {
+  width: 500px;
+}
+.review .start, .tab button {
+  width: 100px;
+  height:35px;
+  color: darkblue;
+  border-radius: 5px;
+  background-color: lightblue;
+  font-size: 20px;
+}
