@@ -2,6 +2,10 @@ body {
   width: 100%;
   margin: auto;
 }
+.redirect{
+  text-align:center;
+  color: indianred;
+}
 
 .header{
   text-align:center;
